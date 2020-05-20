@@ -89,10 +89,16 @@
         <div class="comentarios">
             <h2 class="comentarios-h2">CLIENTES REGULARES</h2>
             <div class="comentarios-container-img">
-                <div class="comentarios-imagen"  id="contenidoapi">
+                <div class="comentarios-imagen"  id="usuario1">
                 
                 </div>
-                <div class="comentarios-imagen"  id="contenidoapi2">
+                <div class="comentarios-imagen"  id="usuario2">
+                    
+                </div>
+                <div class="comentarios-imagen"  id="usuario3">
+                    
+                </div>
+                <div class="comentarios-imagen"  id="usuario4">
                     
                 </div>
             </div>
@@ -101,8 +107,12 @@
            
     </main>
     <script>
-        var conten=document.getElementById("contenidoapi")
-        var conten2=document.getElementById("contenidoapi2")
+        var usuario1=document.getElementById("usuario1")
+        var usuario2=document.getElementById("usuario2")
+        var usuario3=document.getElementById("usuario3")
+
+        var usuario4=document.getElementById("usuario4")
+
 
       
             fetch('https://randomuser.me/api/')
@@ -110,24 +120,37 @@
             .then(data =>{
                 console.log(data)
                 
-            conten.innerHTML = `<img src="${data.results['0'].picture.large}" class="img-fluid rounded-circle" alt="">
-            <p style="color: blanchedalmond;">Nombre: ${data.results['0'].name.last}</p>`
+                usuario1.innerHTML = `<img src="${data.results['0'].picture.large}" class="img-fluid rounded-circle" alt="">
+             <p class="name">Nombre: ${data.results['0'].name.last}</p>
+             <p class="name">Instrumentos de gran calidad me encantan.</p>`
             })
             fetch('https://randomuser.me/api/')
             .then(res => res.json())
             .then(data =>{
                 console.log(data)
                 
-            conten2.innerHTML = `<img src="${data.results['0'].picture.large}" class="img-fluid rounded-circle" alt="">
-            <p style="color: blanchedalmond;">Nombre: ${data.results['0'].name.last}</p>`
+                usuario2=document.getElementById("usuario2")
+                .innerHTML = `<img src="${data.results['0'].picture.large}" class="img-fluid rounded-circle" alt="">
+            <p class="name">Nombre: ${data.results['0'].name.last}</p>
+            <p class="name">El bajo que compre es realmente increíble.</p>`
             })
             fetch('https://randomuser.me/api/')
             .then(res => res.json())
             .then(data =>{
                 console.log(data)
                 
-            conten.innerHTML = `<img src="${data.results['0'].picture.large}" class="img-fluid rounded-circle" alt="">
-            <p style="color: blanchedalmond;">Nombre: ${data.results['0'].name.last}</p>`
+                usuario3.innerHTML = `<img src="${data.results['0'].picture.large}" class="img-fluid rounded-circle" alt="">
+                 <p class="name">Nombre: ${data.results['0'].name.last}</p>
+                 <p class="name">La guitarra que tanto queria pude encontrarla acá.</p>`
+            })
+            fetch('https://randomuser.me/api/')
+            .then(res => res.json())
+            .then(data =>{
+                console.log(data)
+                
+                usuario4.innerHTML = `<img src="${data.results['0'].picture.large}" class="" alt="user">
+                 <p class="name"> Nombre: ${data.results['0'].name.last}</p>
+                 <p class="name">Aqui se puede encontrar todo tipo instrumentos musicales.</p>`
             })
         
     </script>
