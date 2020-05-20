@@ -30,7 +30,9 @@
         </div>
         
         <div class="productos">
-            <div class="producto">
+
+
+         
                 <div class="content">
                     <div class="content-img">
                         <img src="img/guitar1.jpg" alt="">
@@ -40,8 +42,10 @@
                     <p>Guison</p>
                     <button> comprar</button>
                 </div>
-            </div>
-            <div class="producto">
+   
+
+
+        
                 <div class="content">
                     <div class="content-img">
                         <img src="img/guitar2.jpg" alt="">
@@ -51,8 +55,81 @@
                     <p>Guison</p>
                     <button> comprar</button>
                 </div>
-            </div>
+         
+
+
+
+                <div class="content">
+                    <div class="content-img">
+                        <img src="img/guitar2.jpg" alt="">
+                    </div>
+                  
+                    <h3>Guitar 1</h3>
+                    <p>Guison</p>
+                    <button> comprar</button>
+                </div>
+     
+
+
+     
+                <div class="content">
+                    <div class="content-img">
+                        <img src="img/guitar2.jpg" alt="">
+                    </div>
+                  
+                    <h3>Guitar 1</h3>
+                    <p>Guison</p>
+                    <button> comprar</button>
+                </div>
+            
         </div>
+        </div>
+
+
+        <div class="comentarios">
+            <h2 class="comentarios-h2">CLIENTES REGULARES</h2>
+            <div class="comentarios-container-img">
+                <div class="comentarios-imagen"  id="contenidoapi">
+                
+                </div>
+                <div class="comentarios-imagen"  id="contenidoapi2">
+                    
+                </div>
+            </div>
+            
+        </div>
+           
     </main>
+    <script>
+        var conten=document.getElementById("contenidoapi")
+        var conten2=document.getElementById("contenidoapi2")
+
+      
+            fetch('https://randomuser.me/api/')
+            .then(res => res.json())
+            .then(data =>{
+                console.log(data)
+                
+            conten.innerHTML = `<img src="${data.results['0'].picture.large}" class="img-fluid rounded-circle" alt="">
+            <p style="color: blanchedalmond;">Nombre: ${data.results['0'].name.last}</p>`
+            })
+            fetch('https://randomuser.me/api/')
+            .then(res => res.json())
+            .then(data =>{
+                console.log(data)
+                
+            conten2.innerHTML = `<img src="${data.results['0'].picture.large}" class="img-fluid rounded-circle" alt="">
+            <p style="color: blanchedalmond;">Nombre: ${data.results['0'].name.last}</p>`
+            })
+            fetch('https://randomuser.me/api/')
+            .then(res => res.json())
+            .then(data =>{
+                console.log(data)
+                
+            conten.innerHTML = `<img src="${data.results['0'].picture.large}" class="img-fluid rounded-circle" alt="">
+            <p style="color: blanchedalmond;">Nombre: ${data.results['0'].name.last}</p>`
+            })
+        
+    </script>
 </body>
 </html>
