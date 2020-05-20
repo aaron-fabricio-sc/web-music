@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    box-sizing: border-box;
+}
+
+nav{
+    width: 100%;
+    min-height: 130px;
+    display: flex;
+    justify-content: space-between;
+    background: #aba4a4;
+}
+.container__logo{
+    width: 15%;
+    height: 100px;
+    position: relative;
+    img{
+        margin: 16px;
+        object-fit: cover;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+.container__menu{
+
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+     ul{
+         display: flex;
+     
+
+
+         li{
+            list-style: none;
+            padding-left: 15px;
+            a{
+                color: blue;
+                text-decoration: none;
+            }
+         }
+     }
+}
+
+
+main{
+    .content-titulo{
+        margin: auto;
+      
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+
+
+
+   
+}
+.productos{
+    background-image: url("../img/fondo-imagen2.jpg");
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    
+
+    .producto{
+        padding: 11px;
+    }
+    .producto .content{
+        background: rgba(3, 2, 2, 0.507);
+        text-align: center;
+        padding: 5px;
+        color: white;
+        box-shadow: 0 0 4px white;
+
+        .content-img{
+            width: 170px;
+            height: 170px;
+            position: relative;
+       
+       
+            img{
+                height: 170px;
+                width: 100%;
+       
+                
+            }
+        }
+
+        button{
+            padding: 10px;
+            color: rgb(0, 0, 0);
+            background: #aba4a4;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            
+        }
+        button:hover{
+            color: rgb(252, 250, 250);
+            background: #534e4e;
+
+        }
+        
+    }
+}
