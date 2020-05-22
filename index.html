@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
     <title>Aaron Music</title>
 </head>
 <body>
     <head>
-        <nav>
+        <nav class="animate__animated animate__backInLeft">
             <div class="container__logo">
                 <img src="img/logo.jpg" alt="">
+                
+                <h3>Aarón Music</h3>
             </div>
             <div class="container__menu">
                 <ul>
-                    <li><a href="">Mas detalles</a></li>
-                    <li><a href="">Lista</a></li>
+                    <li><a href="html/formulario.html">Mas detalles</a></li>
+                    <li><a href="html/productos.html">Lista de productos</a></li>
 
                 </ul>
             </div>
@@ -33,85 +37,126 @@
 
 
          
-                <div class="content">
-                    <div class="content-img">
+                <div class="content fadeIn">
+                    <div class="content-img ">
                         <img src="img/guitar1.jpg" alt="">
                     </div>
                   
                     <h3>Guitar 1</h3>
-                    <p>Guison</p>
+                    <p>Descripción</p>
                     <button> comprar</button>
                 </div>
    
 
 
         
-                <div class="content">
+                <div class="content fadeIn">
                     <div class="content-img">
                         <img src="img/guitar2.jpg" alt="">
                     </div>
                   
-                    <h3>Guitar 1</h3>
-                    <p>Guison</p>
+                    <h3>Guitar 2</h3>
+                    <p>Descripción</p>
                     <button> comprar</button>
                 </div>
          
 
 
 
-                <div class="content">
+                <div class="content fadeIn">
                     <div class="content-img">
-                        <img src="img/guitar2.jpg" alt="">
+                        <img src="img/guitar3.jpg" alt="">
                     </div>
                   
-                    <h3>Guitar 1</h3>
-                    <p>Guison</p>
+                    <h3>Guitar 3</h3>
+                    <p>Descripción</p>
                     <button> comprar</button>
                 </div>
      
 
 
      
-                <div class="content">
+                <div class="content fadeIn">
                     <div class="content-img">
                         <img src="img/guitar2.jpg" alt="">
                     </div>
                   
-                    <h3>Guitar 1</h3>
-                    <p>Guison</p>
+                    <h3>Guitar 3</h3>
+                    <p>Descripción</p>
                     <button> comprar</button>
                 </div>
             
         </div>
-        </div>
+        <div class="Caracteristicas">
+            <h3>Características</h3>
+            <div class="beneficios">
+                <div class="duraderos">
 
-
-        <div class="comentarios">
-            <h2 class="comentarios-h2">CLIENTES REGULARES</h2>
-            <div class="comentarios-container-img">
-                <div class="comentarios-imagen"  id="usuario1">
-                
-                </div>
-                <div class="comentarios-imagen"  id="usuario2">
+                    <div class="degrade">
+                        <h4>DURADEROS</h4>
+                        <p>Adquiera instrumentos <strong>musicales</strong> de calidad y duraderos.</p>
+                    </div>
                     
                 </div>
-                <div class="comentarios-imagen"  id="usuario3">
+                <div class="increible">
+                    <div class="degrade">
+    
+                        <H4>INCREÍBLE</H4>
+                        <p>Aqui podra conseguir todo tipo de instrumentos musicales y equipos de sonido</p>
+                    </div>
                     
                 </div>
-                <div class="comentarios-imagen"  id="usuario4">
+                <div class="confiable">
+                    <div class="degrade">
+                        <h4>CONFIABLE</h4>
+                        <p>Cada instrumento musical y equipo de sonido tiene garantia de un año.</p>
+    
+                    </div>
                     
                 </div>
             </div>
             
+
+        </div>
+        <div class="comentarios">
+            <div class="opacidad">
+                <h2 class="comentarios-h2">CLIENTES REGULARES</h2>
+                <div class="comentarios-container-img">
+                    <div class="comentarios-imagen"  id="usuario1">
+                    
+                    </div>
+                    <div class="comentarios-imagen"  id="usuario2">
+                        
+                    </div>
+                    <div class="comentarios-imagen"  id="usuario3">
+                        
+                    </div>
+                   
+                </div>
+            </div>
+            
+            
         </div>
            
     </main>
+    <footer>
+        <div class="container-footer">
+            <div class="contactos">
+                <h5>Contactos</h5>
+                <a href="">Facebook</a>
+                <a href="">Twitter</a>
+            </div>
+           
+            <p class="nombre">Aaron Music</p>
+            <p class="der">LATAM</p>
+        </div>
+    </footer>
     <script>
         var usuario1=document.getElementById("usuario1")
         var usuario2=document.getElementById("usuario2")
         var usuario3=document.getElementById("usuario3")
 
-        var usuario4=document.getElementById("usuario4")
+
 
 
       
@@ -120,7 +165,7 @@
             .then(data =>{
                 console.log(data)
                 
-                usuario1.innerHTML = `<img src="${data.results['0'].picture.large}" class="img-fluid rounded-circle" alt="">
+                usuario1.innerHTML = `<img src="${data.results['0'].picture.large}" class="" alt="">
              <p class="name">Nombre: ${data.results['0'].name.last}</p>
              <p class="name">Instrumentos de gran calidad me encantan.</p>`
             })
@@ -130,7 +175,7 @@
                 console.log(data)
                 
                 usuario2=document.getElementById("usuario2")
-                .innerHTML = `<img src="${data.results['0'].picture.large}" class="img-fluid rounded-circle" alt="">
+                .innerHTML = `<img src="${data.results['0'].picture.large}" class="" alt="">
             <p class="name">Nombre: ${data.results['0'].name.last}</p>
             <p class="name">El bajo que compre es realmente increíble.</p>`
             })
@@ -139,19 +184,11 @@
             .then(data =>{
                 console.log(data)
                 
-                usuario3.innerHTML = `<img src="${data.results['0'].picture.large}" class="img-fluid rounded-circle" alt="">
+                usuario3.innerHTML = `<img src="${data.results['0'].picture.large}" class="" alt="">
                  <p class="name">Nombre: ${data.results['0'].name.last}</p>
                  <p class="name">La guitarra que tanto queria pude encontrarla acá.</p>`
             })
-            fetch('https://randomuser.me/api/')
-            .then(res => res.json())
-            .then(data =>{
-                console.log(data)
-                
-                usuario4.innerHTML = `<img src="${data.results['0'].picture.large}" class="" alt="user">
-                 <p class="name"> Nombre: ${data.results['0'].name.last}</p>
-                 <p class="name">Aqui se puede encontrar todo tipo instrumentos musicales.</p>`
-            })
+           
         
     </script>
 </body>

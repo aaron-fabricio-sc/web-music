@@ -1,0 +1,27 @@
+.fadeIn {
+    animation-name: fadedonw;
+    -webkit-animation-name: fadedonw;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+}
+
+@keyframes fadedonw {
+    from {
+            opacity: 0;
+         
+            transform: translate3d(0,300%,0);
+    }
+    to {
+        opacity: 1;
+     
+        transform: translate3d(0,0,0);
+    }
+}
+
+// .fadeIn {
+//     animation-name: fadeIn;
+//     animation-duration: 4s;
+//     animation-fill-mode: 4s;
+// }

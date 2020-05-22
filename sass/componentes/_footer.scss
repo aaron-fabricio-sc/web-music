@@ -1,0 +1,37 @@
+footer{
+    background: #2b7575;
+}
+
+.container-footer{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 150px;
+
+    .contactos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+        h5{
+            color: white;
+            font-size: 27px;
+            margin: 0;
+            padding: 10px;
+        }
+        a{
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+        }
+    } 
+    .nombre{
+        text-align: center;
+        color: white;
+        font-size: 30px;
+    }  
+    .der{
+        text-align: center;
+        color: white;
+        font-size: 30px;
+    }
+}
