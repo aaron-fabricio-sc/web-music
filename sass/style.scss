@@ -64,6 +64,7 @@ ul{
     width: 100%;
     height: 100vh;
     display: relative;
+    z-index: 0;
   
     .opc{
         display: flex;
@@ -91,7 +92,7 @@ ul{
             font-family: 'Roboto', sans-serif;
             font-weight: 900;
             position: relative;
-            z-index: -1;
+            z-index: 0;
         }
         h3{
             color: white;
@@ -99,6 +100,7 @@ ul{
             text-align: center;
             font-family: 'Roboto', sans-serif;
             font-weight: 900;
+            z-index: 0;
             
             
         }
