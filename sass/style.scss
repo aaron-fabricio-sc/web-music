@@ -63,10 +63,15 @@ ul{
 .hero{
     width: 100%;
     height: 100vh;
-    display: relative;
-    z-index: 0;
+   position: relative;
   
     .opc{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+       
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -74,6 +79,7 @@ ul{
         background: rgba(0, 0, 0,.7);
         height: 100%;
         width: 100%;
+        
 
         img{
             object-fit: cover;
@@ -81,7 +87,7 @@ ul{
             height: 100%;
             background-position: center;
             position: absolute;
-            z-index: -3;
+            z-index:-3;
             
         }
         h1{
@@ -91,8 +97,10 @@ ul{
             margin: 15px;
             font-family: 'Roboto', sans-serif;
             font-weight: 900;
-            position: relative;
-            z-index: 0;
+         
+            z-index:0;
+
+         
         }
         h3{
             color: white;
@@ -100,7 +108,8 @@ ul{
             text-align: center;
             font-family: 'Roboto', sans-serif;
             font-weight: 900;
-            z-index: 0;
+            z-index:0;
+     
             
             
         }
